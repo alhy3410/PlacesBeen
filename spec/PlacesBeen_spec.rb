@@ -8,4 +8,11 @@ describe(PlacesBeen) do
       expect(test_place.description()).to(eq("USA"))
     end
   end
+
+  describe('.all') do
+    it("is empty at first") do
+      expect(PlacesBeen.all()).to(eq([]))
+    end
+  end
+  
 end
