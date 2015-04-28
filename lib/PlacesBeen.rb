@@ -1,4 +1,6 @@
 class PlacesBeen
+
+  @@all_places = []
   define_method(:initialize) do |description|
     @description = description
   end
@@ -6,4 +8,9 @@ class PlacesBeen
   define_method(:description) do
     @description
   end
+
+  define_singleton_method(:all) do
+    @@all_places
+  end
+
 end
