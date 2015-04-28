@@ -17,9 +17,17 @@ describe(PlacesBeen) do
 
   describe('#save') do
     it("adds a place to the array of saved places") do
-      test_place = PlacesBeen.new("USA")
+      test_place = PlacesBeen.new("Canada")
       test_place.save()
       expect(PlacesBeen.all()).to(eq([test_place]))
+    end
+  end
+
+  describe('.clear') do
+    it("will clear the array of all places been") do
+      PlacesBeen.new("Canada").save()
+      PlacesBeen.clear()
+      expect(PlacesBeen.all()).to(eq([]))
     end
   end
 end
