@@ -13,4 +13,9 @@ class PlacesBeen
     @@all_places
   end
 
+  define_method(:save) do
+    @@all_places.push(self)
+  end
+  
+
 end
