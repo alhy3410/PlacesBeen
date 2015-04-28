@@ -1,0 +1,17 @@
+<h1> This is a list of places you have been! </h1>
+<p> Countries Listed </p>
+
+<ul>
+  <% @places.each() do |place| %>
+  <li><%= place.description() %> </li>
+  <% end %>
+</ul>
+
+<p> Add a new place to the list: </p>
+
+<form action ='/places' method='post'>
+  <label for = 'place'> Place Visited</label>
+  <input id= 'place' name='place' type='text'>
+
+  <button type ='submit'> Add Place</button>
+</form>
